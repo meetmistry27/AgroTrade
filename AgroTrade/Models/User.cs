@@ -19,8 +19,9 @@ namespace AgroTrade.Models
         public string Email { get; set; } 
 
         [Phone(ErrorMessage = "Invalid phone number format.")]
-        public string Phone { get; set; } 
+        public string Phone { get; set; }
 
+        public ICollection<Crop> Crops { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow; 
     }
 }

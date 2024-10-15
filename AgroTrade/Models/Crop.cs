@@ -7,8 +7,6 @@ namespace AgroTrade.Models
     {
         public int CropId { get; set; } 
 
-     
-
         [Required(ErrorMessage = "Crop name is required.")]
         [StringLength(50, ErrorMessage = "Crop name cannot exceed 50 characters.")]
         public string CropName { get; set; } 
@@ -25,6 +23,6 @@ namespace AgroTrade.Models
 
         [Required(ErrorMessage = "User ID is required.")]
         public int UserId { get; set; }
-        public User User { get; set; } 
+        public User? User { get; set; } 
     }
 }

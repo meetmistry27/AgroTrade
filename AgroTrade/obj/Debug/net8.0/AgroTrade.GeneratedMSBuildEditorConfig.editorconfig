@@ -18,6 +18,22 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\np030\source\repos\AgroTrade\AgroTrade
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/np030/source/repos/AgroTrade/AgroTrade/Views/Crop/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3JvcFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/np030/source/repos/AgroTrade/AgroTrade/Views/Crop/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3JvcFxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/np030/source/repos/AgroTrade/AgroTrade/Views/Crop/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3JvcFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/np030/source/repos/AgroTrade/AgroTrade/Views/Crop/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3JvcFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/np030/source/repos/AgroTrade/AgroTrade/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

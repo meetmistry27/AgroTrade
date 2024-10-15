@@ -1,0 +1,25 @@
+﻿@model AgroTrade.Models.Crop
+
+<h2>Edit Crop</h2>
+
+<form asp-action="Edit">
+    <input type="hidden" asp-for="CropId" />
+    <div>
+        <label asp-for="CropName"></label>
+        <input asp-for="CropName" />
+        <span asp-validation-for="CropName"></span>
+    </div>
+    <div>
+        <label asp-for="Quantity"></label>
+        <input asp-for="Quantity" />
+        <span asp-validation-for="Quantity"></span>
+    </div>
+    <div>
+        <label asp-for="Price"></label>
+        <input asp-for="Price" />
+        <span asp-validation-for="Price"></span>
+    </div>
+    <input type="submit" value="Save" />
+</form>
+
+<a asp-action="Index">Back to List</a>

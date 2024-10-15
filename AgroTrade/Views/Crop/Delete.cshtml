@@ -1,0 +1,21 @@
+﻿@model AgroTrade.Models.Crop
+
+<h2>Delete Crop</h2>
+
+<h3>Are you sure you want to delete this crop?</h3>
+<div>
+    <h4>@Model.CropName</h4>
+    <p>Quantity: @Model.Quantity</p>
+    <p>Price: @Model.Price</p>
+    <p>Created At: @Model.CreatedAt</p>
+    <p>User ID: @Model.UserId</p>
+    <p>Crop ID: @Model.CropId</p>
+
+</div>
+
+<form asp-action="DeleteConfirmed" method="post">
+    <input type="hidden" asp-for="CropId" />
+    <input type="submit" value="Delete" />
+</form>
+
+<a asp-action="Index">Back to List</a>
