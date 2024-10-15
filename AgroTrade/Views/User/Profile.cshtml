@@ -1,1 +1,25 @@
-﻿<p>Hii</p>
+﻿@model AgroTrade.Models.User
+
+@{
+    ViewData["Title"] = "User Profile";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    <h3>Your Profile Information</h3>
+    <p><strong>Username:</strong> @Model.Username</p>
+    <p><strong>Email:</strong> @Model.Email</p>
+    <p><strong>Phone:</strong> @Model.Phone</p>
+    <p><strong>Created At:</strong> @Model.CreatedAt.ToString("g")</p>
+
+    <a href="@Url.Action("Edit", "User", new { id = Model.UserId })" class="btn btn-warning">Edit Profile</a>
+    <form asp-action="Logout" method="post" style="display:inline;">
+        <button type="submit" class="btn btn-danger">Logout</button>
+    </form>
+</div>
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success mt-3">@TempData["SuccessMessage"]</div>
+}

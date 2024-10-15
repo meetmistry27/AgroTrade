@@ -142,3 +142,4 @@ C:\Users\np030\source\repos\AgroTrade\AgroTrade\obj\Debug\net8.0\AgroTrade.cspro
 C:\Users\np030\source\repos\AgroTrade\AgroTrade\obj\Debug\net8.0\AgroTrade.csproj.Up2Date
 C:\Users\np030\source\repos\AgroTrade\AgroTrade\bin\Debug\net8.0\MySqlConnector.dll
 C:\Users\np030\source\repos\AgroTrade\AgroTrade\bin\Debug\net8.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\np030\source\repos\AgroTrade\AgroTrade\obj\Debug\net8.0\AgroTrade.sourcelink.json

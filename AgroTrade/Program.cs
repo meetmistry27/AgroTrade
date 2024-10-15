@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using AgroTrade.Models;
 using AgroTrade.Services;
+using AgroTrade.Filter;
 
 var builder = WebApplication.CreateBuilder(args);
 

@@ -19,16 +19,26 @@
                     <li class="nav-item">
                         <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Login">Login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Register">Register</a>
-                    </li>
-                    
-                    
+
+                    @if (Context.Request.Cookies.TryGetValue("UserId", out var userId))
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Profile" asp-route-id="@userId">Profile</a>
+                        </li>
+                        
+                        
+                        
+                    }
+                    else
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Login">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Register">Register</a>
+                        </li>
+                    }
                 </ul>
-                </div>
             </div>
         </nav>
     </header>
@@ -49,3 +59,4 @@
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
+
