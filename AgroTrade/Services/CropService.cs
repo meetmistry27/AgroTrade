@@ -38,14 +38,13 @@ namespace AgroTrade.Services
 
         public async Task DeleteCropAsync(int id)
         {
-            var crop = await GetcropByid(id); 
+            var crop = await GetcropByid(id);
 
             if (crop != null)
             {
                 _context.Crops.Remove(crop);
-                await _context.SaveChangesAsync(); 
+                await _context.SaveChangesAsync();
             }
         }
-
     }
 }

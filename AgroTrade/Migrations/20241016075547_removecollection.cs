@@ -5,7 +5,7 @@
 namespace AgroTrade.Migrations
 {
     /// <inheritdoc />
-    public partial class navigationproperty : Migration
+    public partial class removecollection : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

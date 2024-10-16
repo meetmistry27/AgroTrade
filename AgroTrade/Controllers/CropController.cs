@@ -1,29 +1,33 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using AgroTrade.Models;
 using AgroTrade.Services;
+using System.IO;
+using System.Threading.Tasks;
 
 namespace AgroTrade.Controllers
 {
     public class CropController : Controller
     {
         private readonly CropService _cropService;
+        private readonly IWebHostEnvironment _webHostEnvironment;
         private readonly UserService _userService;
-        public CropController(CropService cropService,UserService userService)
+
+        public CropController(CropService cropService, UserService userService, IWebHostEnvironment webHostEnvironment)
         {
-            _userService = userService;
             _cropService = cropService;
+            _userService = userService;
+            _webHostEnvironment = webHostEnvironment;
         }
 
         private int GetUserId()
         {
             if (Request.Cookies.TryGetValue("UserId", out var userIdString) && int.TryParse(userIdString, out var userId))
             {
-                return userId; 
+                return userId;
             }
 
             throw new InvalidOperationException("UserId not found in cookies.");
         }
-
 
         public async Task<IActionResult> Index()
         {
@@ -44,15 +48,33 @@ namespace AgroTrade.Controllers
                 crop.UserId = GetUserId();
                 var user = await _userService.GetUserProfile(crop.UserId);
                 crop.User = user;
-                await _cropService.CreateCropAsync(crop);
 
+                if (crop.Image != null && crop.Image.Length > 0)
+                {
+                    var fileName = Path.GetFileNameWithoutExtension(crop.Image.FileName);
+                    var extension = Path.GetExtension(crop.Image.FileName);
+                    fileName = fileName + "_" + Path.GetRandomFileName() + extension;
+
+                    var filePath = Path.Combine(_webHostEnvironment.WebRootPath, "uploads", fileName);
+
+                    // Save the file
+                    using (var stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await crop.Image.CopyToAsync(stream);
+                    }
+
+                    crop.ImagePath = "/uploads/" + fileName;
+                }
+
+                await _cropService.CreateCropAsync(crop);
                 return RedirectToAction(nameof(Index));
             }
             else
             {
                 var errors = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage);
-                TempData["ErrorMessage"] = string.Join(", ", errors);  
+                TempData["ErrorMessage"] = string.Join(", ", errors);
             }
+
             return View(crop);
         }
 
@@ -72,6 +94,24 @@ namespace AgroTrade.Controllers
             if (ModelState.IsValid)
             {
                 crop.UserId = GetUserId();
+
+                // Handle image upload in Edit
+                if (crop.Image != null && crop.Image.Length > 0)
+                {
+                    var fileName = Path.GetFileNameWithoutExtension(crop.Image.FileName);
+                    var extension = Path.GetExtension(crop.Image.FileName);
+                    fileName = fileName + "_" + Path.GetRandomFileName() + extension;
+
+                    var filePath = Path.Combine(_webHostEnvironment.WebRootPath, "uploads", fileName);
+
+                    using (var stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await crop.Image.CopyToAsync(stream);
+                    }
+
+                    crop.ImagePath = "/uploads/" + fileName;
+                }
+
                 await _cropService.UpdateCropAsync(crop);
                 return RedirectToAction(nameof(Index));
             }
@@ -85,14 +125,14 @@ namespace AgroTrade.Controllers
             {
                 return NotFound();
             }
-            return View(crop); 
+            return View(crop);
         }
 
         [HttpPost]
-        public async Task<IActionResult> DeleteConfirmed(int CropId) 
+        public async Task<IActionResult> DeleteConfirmed(int CropId)
         {
-            await _cropService.DeleteCropAsync(CropId); 
-            return RedirectToAction(nameof(Index)); 
+            await _cropService.DeleteCropAsync(CropId);
+            return RedirectToAction(nameof(Index));
         }
     }
 }

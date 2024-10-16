@@ -31,6 +31,11 @@ namespace AgroTrade.Controllers
                 }
                 ModelState.AddModelError("", "User already exists.");
             }
+            else
+            {
+                var errors = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage);
+                TempData["ErrorMessage"] = string.Join(", ", errors);
+            }
             return View(user);
         }
 
@@ -59,6 +64,7 @@ namespace AgroTrade.Controllers
                 }
                 ModelState.AddModelError("", "Invalid login attempt.");
             }
+
             return View();
         }
 

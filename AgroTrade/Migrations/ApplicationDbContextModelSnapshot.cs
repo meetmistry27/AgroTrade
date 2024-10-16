@@ -38,6 +38,10 @@ namespace AgroTrade.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("varchar(50)");
 
+                    b.Property<string>("ImagePath")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(65,30)");
 
@@ -128,7 +132,7 @@ namespace AgroTrade.Migrations
             modelBuilder.Entity("AgroTrade.Models.Crop", b =>
                 {
                     b.HasOne("AgroTrade.Models.User", "User")
-                        .WithMany("Crops")
+                        .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -161,11 +165,6 @@ namespace AgroTrade.Migrations
                     b.Navigation("Crop");
 
                     b.Navigation("Seller");
-                });
-
-            modelBuilder.Entity("AgroTrade.Models.User", b =>
-                {
-                    b.Navigation("Crops");
                 });
 #pragma warning restore 612, 618
         }

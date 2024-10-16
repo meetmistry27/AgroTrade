@@ -36,3 +36,8 @@
 
 <a asp-controller="User" asp-action="Login">Already have an account? Login here.</a>
 
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger mt-3">@TempData["ErrorMessage"]</div>
+}
+

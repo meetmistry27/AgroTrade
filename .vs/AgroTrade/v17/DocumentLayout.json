@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\np030\\source\\repos\\AgroTrade\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{42BB7F47-73BA-4B5D-8BE7-602B925DEE17}|AgroTrade\\AgroTrade.csproj|c:\\users\\np030\\source\\repos\\agrotrade\\agrotrade\\models\\crop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42BB7F47-73BA-4B5D-8BE7-602B925DEE17}|AgroTrade\\AgroTrade.csproj|solutionrelative:agrotrade\\models\\crop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42BB7F47-73BA-4B5D-8BE7-602B925DEE17}|AgroTrade\\AgroTrade.csproj|c:\\users\\np030\\source\\repos\\agrotrade\\agrotrade\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42BB7F47-73BA-4B5D-8BE7-602B925DEE17}|AgroTrade\\AgroTrade.csproj|solutionrelative:agrotrade\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42BB7F47-73BA-4B5D-8BE7-602B925DEE17}|AgroTrade\\AgroTrade.csproj|c:\\users\\np030\\source\\repos\\agrotrade\\agrotrade\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42BB7F47-73BA-4B5D-8BE7-602B925DEE17}|AgroTrade\\AgroTrade.csproj|solutionrelative:agrotrade\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{42BB7F47-73BA-4B5D-8BE7-602B925DEE17}|AgroTrade\\AgroTrade.csproj|c:\\users\\np030\\source\\repos\\agrotrade\\agrotrade\\controllers\\cropcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{42BB7F47-73BA-4B5D-8BE7-602B925DEE17}|AgroTrade\\AgroTrade.csproj|solutionrelative:agrotrade\\controllers\\cropcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,32 +23,44 @@
       "RelativeMoniker": "D:0:0:{42BB7F47-73BA-4B5D-8BE7-602B925DEE17}|AgroTrade\\AgroTrade.csproj|solutionrelative:agrotrade\\services\\cropservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{42BB7F47-73BA-4B5D-8BE7-602B925DEE17}|AgroTrade\\AgroTrade.csproj|c:\\users\\np030\\source\\repos\\agrotrade\\agrotrade\\views\\crop\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{42BB7F47-73BA-4B5D-8BE7-602B925DEE17}|AgroTrade\\AgroTrade.csproj|solutionrelative:agrotrade\\views\\crop\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{42BB7F47-73BA-4B5D-8BE7-602B925DEE17}|AgroTrade\\AgroTrade.csproj|c:\\users\\np030\\source\\repos\\agrotrade\\agrotrade\\views\\crop\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{42BB7F47-73BA-4B5D-8BE7-602B925DEE17}|AgroTrade\\AgroTrade.csproj|solutionrelative:agrotrade\\views\\crop\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{42BB7F47-73BA-4B5D-8BE7-602B925DEE17}|AgroTrade\\AgroTrade.csproj|c:\\users\\np030\\source\\repos\\agrotrade\\agrotrade\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{42BB7F47-73BA-4B5D-8BE7-602B925DEE17}|AgroTrade\\AgroTrade.csproj|solutionrelative:agrotrade\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{42BB7F47-73BA-4B5D-8BE7-602B925DEE17}|AgroTrade\\AgroTrade.csproj|c:\\users\\np030\\source\\repos\\agrotrade\\agrotrade\\views\\user\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{42BB7F47-73BA-4B5D-8BE7-602B925DEE17}|AgroTrade\\AgroTrade.csproj|solutionrelative:agrotrade\\views\\user\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{42BB7F47-73BA-4B5D-8BE7-602B925DEE17}|AgroTrade\\AgroTrade.csproj|c:\\users\\np030\\source\\repos\\agrotrade\\agrotrade\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{42BB7F47-73BA-4B5D-8BE7-602B925DEE17}|AgroTrade\\AgroTrade.csproj|solutionrelative:agrotrade\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{42BB7F47-73BA-4B5D-8BE7-602B925DEE17}|AgroTrade\\AgroTrade.csproj|c:\\users\\np030\\source\\repos\\agrotrade\\agrotrade\\views\\user\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{42BB7F47-73BA-4B5D-8BE7-602B925DEE17}|AgroTrade\\AgroTrade.csproj|solutionrelative:agrotrade\\views\\user\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42BB7F47-73BA-4B5D-8BE7-602B925DEE17}|AgroTrade\\AgroTrade.csproj|c:\\users\\np030\\source\\repos\\agrotrade\\agrotrade\\views\\user\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{42BB7F47-73BA-4B5D-8BE7-602B925DEE17}|AgroTrade\\AgroTrade.csproj|solutionrelative:agrotrade\\views\\user\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42BB7F47-73BA-4B5D-8BE7-602B925DEE17}|AgroTrade\\AgroTrade.csproj|c:\\users\\np030\\source\\repos\\agrotrade\\agrotrade\\views\\user\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{42BB7F47-73BA-4B5D-8BE7-602B925DEE17}|AgroTrade\\AgroTrade.csproj|solutionrelative:agrotrade\\views\\user\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42BB7F47-73BA-4B5D-8BE7-602B925DEE17}|AgroTrade\\AgroTrade.csproj|c:\\users\\np030\\source\\repos\\agrotrade\\agrotrade\\views\\crop\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{42BB7F47-73BA-4B5D-8BE7-602B925DEE17}|AgroTrade\\AgroTrade.csproj|solutionrelative:agrotrade\\views\\crop\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{42BB7F47-73BA-4B5D-8BE7-602B925DEE17}|AgroTrade\\AgroTrade.csproj|c:\\users\\np030\\source\\repos\\agrotrade\\agrotrade\\views\\crop\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{42BB7F47-73BA-4B5D-8BE7-602B925DEE17}|AgroTrade\\AgroTrade.csproj|solutionrelative:agrotrade\\views\\crop\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{42BB7F47-73BA-4B5D-8BE7-602B925DEE17}|AgroTrade\\AgroTrade.csproj|c:\\users\\np030\\source\\repos\\agrotrade\\agrotrade\\models\\crop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{42BB7F47-73BA-4B5D-8BE7-602B925DEE17}|AgroTrade\\AgroTrade.csproj|solutionrelative:agrotrade\\models\\crop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{42BB7F47-73BA-4B5D-8BE7-602B925DEE17}|AgroTrade\\AgroTrade.csproj|c:\\users\\np030\\source\\repos\\agrotrade\\agrotrade\\views\\crop\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{42BB7F47-73BA-4B5D-8BE7-602B925DEE17}|AgroTrade\\AgroTrade.csproj|solutionrelative:agrotrade\\views\\crop\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42BB7F47-73BA-4B5D-8BE7-602B925DEE17}|AgroTrade\\AgroTrade.csproj|c:\\users\\np030\\source\\repos\\agrotrade\\agrotrade\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42BB7F47-73BA-4B5D-8BE7-602B925DEE17}|AgroTrade\\AgroTrade.csproj|solutionrelative:agrotrade\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{42BB7F47-73BA-4B5D-8BE7-602B925DEE17}|AgroTrade\\AgroTrade.csproj|c:\\users\\np030\\source\\repos\\agrotrade\\agrotrade\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{42BB7F47-73BA-4B5D-8BE7-602B925DEE17}|AgroTrade\\AgroTrade.csproj|solutionrelative:agrotrade\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{42BB7F47-73BA-4B5D-8BE7-602B925DEE17}|AgroTrade\\AgroTrade.csproj|c:\\users\\np030\\source\\repos\\agrotrade\\agrotrade\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{42BB7F47-73BA-4B5D-8BE7-602B925DEE17}|AgroTrade\\AgroTrade.csproj|solutionrelative:agrotrade\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,63 +70,129 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "CropController.cs",
+              "DocumentMoniker": "C:\\Users\\np030\\source\\repos\\AgroTrade\\AgroTrade\\Controllers\\CropController.cs",
+              "RelativeDocumentMoniker": "AgroTrade\\Controllers\\CropController.cs",
+              "ToolTip": "C:\\Users\\np030\\source\\repos\\AgroTrade\\AgroTrade\\Controllers\\CropController.cs",
+              "RelativeToolTip": "AgroTrade\\Controllers\\CropController.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAcwEcAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-15T16:47:09.499Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Profile.cshtml",
+              "DocumentMoniker": "C:\\Users\\np030\\source\\repos\\AgroTrade\\AgroTrade\\Views\\User\\Profile.cshtml",
+              "RelativeDocumentMoniker": "AgroTrade\\Views\\User\\Profile.cshtml",
+              "ToolTip": "C:\\Users\\np030\\source\\repos\\AgroTrade\\AgroTrade\\Views\\User\\Profile.cshtml",
+              "RelativeToolTip": "AgroTrade\\Views\\User\\Profile.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-16T07:50:14.282Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\np030\\source\\repos\\AgroTrade\\AgroTrade\\Views\\User\\Login.cshtml",
+              "RelativeDocumentMoniker": "AgroTrade\\Views\\User\\Login.cshtml",
+              "ToolTip": "C:\\Users\\np030\\source\\repos\\AgroTrade\\AgroTrade\\Views\\User\\Login.cshtml",
+              "RelativeToolTip": "AgroTrade\\Views\\User\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-16T07:50:12.898Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\np030\\source\\repos\\AgroTrade\\AgroTrade\\Views\\User\\Edit.cshtml",
+              "RelativeDocumentMoniker": "AgroTrade\\Views\\User\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\np030\\source\\repos\\AgroTrade\\AgroTrade\\Views\\User\\Edit.cshtml",
+              "RelativeToolTip": "AgroTrade\\Views\\User\\Edit.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-16T07:49:59.235Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\np030\\source\\repos\\AgroTrade\\AgroTrade\\Views\\User\\Register.cshtml",
+              "RelativeDocumentMoniker": "AgroTrade\\Views\\User\\Register.cshtml",
+              "ToolTip": "C:\\Users\\np030\\source\\repos\\AgroTrade\\AgroTrade\\Views\\User\\Register.cshtml",
+              "RelativeToolTip": "AgroTrade\\Views\\User\\Register.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAACsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-16T07:49:53.101Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\np030\\source\\repos\\AgroTrade\\AgroTrade\\Views\\Crop\\Index.cshtml",
+              "RelativeDocumentMoniker": "AgroTrade\\Views\\Crop\\Index.cshtml",
+              "ToolTip": "C:\\Users\\np030\\source\\repos\\AgroTrade\\AgroTrade\\Views\\Crop\\Index.cshtml",
+              "RelativeToolTip": "AgroTrade\\Views\\Crop\\Index.cshtml",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAkwCgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-16T07:39:31.445Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\np030\\source\\repos\\AgroTrade\\AgroTrade\\Views\\Crop\\Create.cshtml",
+              "RelativeDocumentMoniker": "AgroTrade\\Views\\Crop\\Create.cshtml",
+              "ToolTip": "C:\\Users\\np030\\source\\repos\\AgroTrade\\AgroTrade\\Views\\Crop\\Create.cshtml",
+              "RelativeToolTip": "AgroTrade\\Views\\Crop\\Create.cshtml",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAowCIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-16T07:33:53.752Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\Users\\np030\\source\\repos\\AgroTrade\\AgroTrade\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "AgroTrade\\Controllers\\UserController.cs",
               "ToolTip": "C:\\Users\\np030\\source\\repos\\AgroTrade\\AgroTrade\\Controllers\\UserController.cs",
               "RelativeToolTip": "AgroTrade\\Controllers\\UserController.cs",
-              "ViewState": "AgIAAFMAAAAAAAAAAAAAwFkAAABRAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwDAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-15T16:54:32.092Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "CropService.cs",
               "DocumentMoniker": "C:\\Users\\np030\\source\\repos\\AgroTrade\\AgroTrade\\Services\\CropService.cs",
               "RelativeDocumentMoniker": "AgroTrade\\Services\\CropService.cs",
               "ToolTip": "C:\\Users\\np030\\source\\repos\\AgroTrade\\AgroTrade\\Services\\CropService.cs",
               "RelativeToolTip": "AgroTrade\\Services\\CropService.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAswBUAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-15T16:47:42.274Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CropController.cs",
-              "DocumentMoniker": "C:\\Users\\np030\\source\\repos\\AgroTrade\\AgroTrade\\Controllers\\CropController.cs",
-              "RelativeDocumentMoniker": "AgroTrade\\Controllers\\CropController.cs",
-              "ToolTip": "C:\\Users\\np030\\source\\repos\\AgroTrade\\AgroTrade\\Controllers\\CropController.cs",
-              "RelativeToolTip": "AgroTrade\\Controllers\\CropController.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAmwDQAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-15T16:47:09.499Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\np030\\source\\repos\\AgroTrade\\AgroTrade\\Program.cs",
-              "RelativeDocumentMoniker": "AgroTrade\\Program.cs",
-              "ToolTip": "C:\\Users\\np030\\source\\repos\\AgroTrade\\AgroTrade\\Program.cs",
-              "RelativeToolTip": "AgroTrade\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-15T16:44:16.699Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 13,
               "Title": "UserService.cs",
               "DocumentMoniker": "C:\\Users\\np030\\source\\repos\\AgroTrade\\AgroTrade\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "AgroTrade\\Services\\UserService.cs",
@@ -115,7 +205,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 1,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\np030\\source\\repos\\AgroTrade\\AgroTrade\\Models\\User.cs",
               "RelativeDocumentMoniker": "AgroTrade\\Models\\User.cs",
@@ -128,39 +218,52 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "Crop.cs",
               "DocumentMoniker": "C:\\Users\\np030\\source\\repos\\AgroTrade\\AgroTrade\\Models\\Crop.cs",
               "RelativeDocumentMoniker": "AgroTrade\\Models\\Crop.cs",
               "ToolTip": "C:\\Users\\np030\\source\\repos\\AgroTrade\\AgroTrade\\Models\\Crop.cs",
               "RelativeToolTip": "AgroTrade\\Models\\Crop.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAA7wBoAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-15T16:23:50.188Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 14,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\np030\\source\\repos\\AgroTrade\\AgroTrade\\Program.cs",
+              "RelativeDocumentMoniker": "AgroTrade\\Program.cs",
+              "ToolTip": "C:\\Users\\np030\\source\\repos\\AgroTrade\\AgroTrade\\Program.cs",
+              "RelativeToolTip": "AgroTrade\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-15T16:44:16.699Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "C:\\Users\\np030\\source\\repos\\AgroTrade\\AgroTrade\\Views\\Crop\\Delete.cshtml",
               "RelativeDocumentMoniker": "AgroTrade\\Views\\Crop\\Delete.cshtml",
               "ToolTip": "C:\\Users\\np030\\source\\repos\\AgroTrade\\AgroTrade\\Views\\Crop\\Delete.cshtml",
               "RelativeToolTip": "AgroTrade\\Views\\Crop\\Delete.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-10-15T16:13:09.663Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 11,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\np030\\source\\repos\\AgroTrade\\AgroTrade\\Views\\Crop\\Edit.cshtml",
               "RelativeDocumentMoniker": "AgroTrade\\Views\\Crop\\Edit.cshtml",
               "ToolTip": "C:\\Users\\np030\\source\\repos\\AgroTrade\\AgroTrade\\Views\\Crop\\Edit.cshtml",
               "RelativeToolTip": "AgroTrade\\Views\\Crop\\Edit.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAkwCkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-10-15T16:12:37.889Z",
               "EditorCaption": ""

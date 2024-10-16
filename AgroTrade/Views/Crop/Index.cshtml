@@ -5,6 +5,7 @@
 <table>
     <thead>
         <tr>
+            <th>Image</th>
             <th>Crop Name</th>
             <th>Quantity</th>
             <th>Price</th>
@@ -17,6 +18,16 @@
         @foreach (var crop in Model)
         {
             <tr>
+                <td>
+                    @if (!string.IsNullOrEmpty(crop.ImagePath))
+                    {
+                        <img src="@crop.ImagePath" alt="Crop Image" style="width: 100px; height: 100px;" />
+                    }
+                    else
+                    {
+                        <span>No Image</span>
+                    }
+                </td>
                 <td>@crop.CropName</td>
                 <td>@crop.Quantity</td>
                 <td>@crop.Price</td>

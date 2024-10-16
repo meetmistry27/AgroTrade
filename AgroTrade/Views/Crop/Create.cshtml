@@ -2,7 +2,7 @@
 
 <h2>Create Crop</h2>
 
-<form asp-action="Create">
+<form asp-action="Create" enctype="multipart/form-data">
     <div>
         <label asp-for="CropName"></label>
         <input asp-for="CropName" />
@@ -18,10 +18,16 @@
         <input asp-for="Price" />
         <span asp-validation-for="Price"></span>
     </div>
+    <div>
+        <label asp-for="Image"></label>
+        <input asp-for="Image" type="file" />
+        <span asp-validation-for="Image"></span>
+    </div>
     <input type="submit" value="Create" />
 </form>
 
 <a asp-action="Index">Back to List</a>
+
 @if (TempData["ErrorMessage"] != null)
 {
     <div class="alert alert-danger mt-3">@TempData["ErrorMessage"]</div>
