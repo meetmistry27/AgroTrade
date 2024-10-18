@@ -66,10 +66,11 @@ ehthumbs.db
 # Mac System files
 .DS_Store
 
-../vs
 
 Migrations/
 # Entity Framework migration-related temp files
 *.Designer.cs
 *.snapshot
 
+# Ignore .vs folder at the root level
+.vs/
