@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\AgroTrade\\AgroTrade\\AgroTrade.csproj": {}
+    "C:\\Users\\np030\\source\\repos\\AgroTrade\\AgroTrade\\AgroTrade.csproj": {}
   },
   "projects": {
-    "C:\\AgroTrade\\AgroTrade\\AgroTrade.csproj": {
+    "C:\\Users\\np030\\source\\repos\\AgroTrade\\AgroTrade\\AgroTrade.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\AgroTrade\\AgroTrade\\AgroTrade.csproj",
+        "projectUniqueName": "C:\\Users\\np030\\source\\repos\\AgroTrade\\AgroTrade\\AgroTrade.csproj",
         "projectName": "AgroTrade",
-        "projectPath": "C:\\AgroTrade\\AgroTrade\\AgroTrade.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\AgroTrade\\AgroTrade\\obj\\",
+        "projectPath": "C:\\Users\\np030\\source\\repos\\AgroTrade\\AgroTrade\\AgroTrade.csproj",
+        "packagesPath": "C:\\Users\\np030\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\np030\\source\\repos\\AgroTrade\\AgroTrade\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\np030\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -43,9 +39,8 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+          "auditMode": "direct"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -85,7 +80,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100-rc.1.24452.12/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

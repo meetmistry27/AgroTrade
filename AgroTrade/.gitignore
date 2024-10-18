@@ -3,7 +3,7 @@ bin/
 obj/
 
 # User-specific Files
-.vscode/
+.vs/
 *.user
 *.rsuser
 *.suo
@@ -65,6 +65,8 @@ ehthumbs.db
 
 # Mac System files
 .DS_Store
+
+../vs
 
 Migrations/
 # Entity Framework migration-related temp files
