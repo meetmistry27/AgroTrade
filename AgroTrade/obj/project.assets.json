@@ -4122,11 +4122,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\np030\\source\\repos\\AgroTrade\\AgroTrade\\AgroTrade.csproj",
+      "projectUniqueName": "C:\\Users\\np030\\source\\repos\\AgroTrade\\AgroTrade\\AgroTrade\\AgroTrade.csproj",
       "projectName": "AgroTrade",
-      "projectPath": "C:\\Users\\np030\\source\\repos\\AgroTrade\\AgroTrade\\AgroTrade.csproj",
+      "projectPath": "C:\\Users\\np030\\source\\repos\\AgroTrade\\AgroTrade\\AgroTrade\\AgroTrade.csproj",
       "packagesPath": "C:\\Users\\np030\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\np030\\source\\repos\\AgroTrade\\AgroTrade\\obj\\",
+      "outputPath": "C:\\Users\\np030\\source\\repos\\AgroTrade\\AgroTrade\\AgroTrade\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\np030\\AppData\\Roaming\\NuGet\\NuGet.Config",

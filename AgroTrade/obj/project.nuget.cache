@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Pz6JuUfxrBo=",
+  "dgSpecHash": "MPyC4S1LYqQ=",
   "success": true,
-  "projectFilePath": "C:\\Users\\np030\\source\\repos\\AgroTrade\\AgroTrade\\AgroTrade.csproj",
+  "projectFilePath": "C:\\Users\\np030\\source\\repos\\AgroTrade\\AgroTrade\\AgroTrade\\AgroTrade.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\np030\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\np030\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
