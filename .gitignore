@@ -1,0 +1,73 @@
+# Build Folders
+bin/
+obj/
+
+# User-specific Files
+.vscode/
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.userprefs
+
+# Auto-generated files
+*.dll
+*.exe
+*.log
+*.sql
+*.pdb
+*.cache
+*.log
+*.vspscc
+
+# Backup & temporary files
+*.bak
+*.swp
+*.tmp
+*.temp
+
+# ASP.NET Scaffolding
+Generated\
+
+# Package Folders
+packages/
+*.nupkg
+*.snupkg
+
+# Resharper files
+_ReSharper*
+*.DotSettings.user
+
+# Rider Files
+.idea/
+
+# Visual Studio
+.vs/
+*.dbmdl
+*.jfm
+.vscode/
+
+# Local history for Visual Studio (VS)
+.history/
+
+# Rider & VS Code directories
+.idea/
+.vscode/
+
+# NuGet
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Mac System files
+.DS_Store
+
+Migrations/
+# Entity Framework migration-related temp files
+*.Designer.cs
+*.snapshot
+

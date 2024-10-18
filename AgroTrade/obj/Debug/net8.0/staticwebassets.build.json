@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "8ERxTnfzqoVGjQsKPX2JTV/EhwCSl72YoBFnP2s2ikA=",
+  "Hash": "jw6OmrmggZX6Ink8Gd/7zyanAgxHWlPd5puw2qjnM8s=",
   "Source": "AgroTrade",
   "BasePath": "_content/AgroTrade",
   "Mode": "Default",
@@ -1193,6 +1193,44 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\np030\\source\\repos\\AgroTrade\\AgroTrade\\wwwroot\\uploads\\MY RATION APP STEPS_zcndhpkc.rgl.jpg",
+      "SourceId": "AgroTrade",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\np030\\source\\repos\\AgroTrade\\AgroTrade\\wwwroot\\",
+      "BasePath": "_content/AgroTrade",
+      "RelativePath": "uploads/MY RATION APP STEPS_zcndhpkc.rgl.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\MY RATION APP STEPS_zcndhpkc.rgl.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\np030\\source\\repos\\AgroTrade\\AgroTrade\\wwwroot\\uploads\\WhatsApp Image 2024-09-29 at 17.28.29_9d515613_y4js2hi4.4wt.jpg",
+      "SourceId": "AgroTrade",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\np030\\source\\repos\\AgroTrade\\AgroTrade\\wwwroot\\",
+      "BasePath": "_content/AgroTrade",
+      "RelativePath": "uploads/WhatsApp Image 2024-09-29 at 17.28.29_9d515613_y4js2hi4.4wt.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\WhatsApp Image 2024-09-29 at 17.28.29_9d515613_y4js2hi4.4wt.jpg"
     }
   ]
 }

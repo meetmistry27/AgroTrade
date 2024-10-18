@@ -245,6 +245,14 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "C:\\Users\\np030\\source\\repos\\AgroTrade\\AgroTrade\\wwwroot\\uploads\\MY RATION APP STEPS_zcndhpkc.rgl.jpg",
+      "PackagePath": "staticwebassets\\uploads\\MY RATION APP STEPS_zcndhpkc.rgl.jpg"
+    },
+    {
+      "Id": "C:\\Users\\np030\\source\\repos\\AgroTrade\\AgroTrade\\wwwroot\\uploads\\WhatsApp Image 2024-09-29 at 17.28.29_9d515613_y4js2hi4.4wt.jpg",
+      "PackagePath": "staticwebassets\\uploads\\WhatsApp Image 2024-09-29 at 17.28.29_9d515613_y4js2hi4.4wt.jpg"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.AgroTrade.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
