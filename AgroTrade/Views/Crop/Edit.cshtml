@@ -20,7 +20,6 @@
         <span asp-validation-for="Price"></span>
     </div>
 
-    <!-- Display existing image if available -->
     @if (!string.IsNullOrEmpty(Model.ImagePath))
     {
         <div>
@@ -28,7 +27,6 @@
         </div>
     }
 
-    <!-- Input for updating the image -->
     <div>
         <label asp-for="Image"></label>
         <input asp-for="Image" type="file" />

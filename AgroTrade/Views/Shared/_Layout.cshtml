@@ -22,11 +22,16 @@
                     <li class="nav-item">
                         <a class="nav-link text-dark" asp-area="" asp-controller="Crop" asp-action="Index">Crops</a>
                     </li>
+                    
                     @if (Context.Request.Cookies.TryGetValue("UserId", out var userId))
                     {
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Profile" asp-route-id="@userId">Profile</a>
-                        </li>
+                            <li class="nav-item">
+                                 <a class="nav-link text-dark" asp-area="" asp-controller="Transaction" asp-action="Index" asp-route-id="@userId">History</a>
+                            </li>
+                            <li class="nav-item">
+                                 <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Profile" >Profile</a>
+                            </li>
+                        
                     }
                     else
                     {

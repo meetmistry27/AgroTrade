@@ -245,8 +245,16 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "C:\\Users\\np030\\source\\repos\\AgroTrade\\AgroTrade\\AgroTrade\\wwwroot\\uploads\\MY RATION APP STEPS_n4bj5jyt.1fz.jpg",
+      "PackagePath": "staticwebassets\\uploads\\MY RATION APP STEPS_n4bj5jyt.1fz.jpg"
+    },
+    {
       "Id": "C:\\Users\\np030\\source\\repos\\AgroTrade\\AgroTrade\\AgroTrade\\wwwroot\\uploads\\MY RATION APP STEPS_zcndhpkc.rgl.jpg",
       "PackagePath": "staticwebassets\\uploads\\MY RATION APP STEPS_zcndhpkc.rgl.jpg"
+    },
+    {
+      "Id": "C:\\Users\\np030\\source\\repos\\AgroTrade\\AgroTrade\\AgroTrade\\wwwroot\\uploads\\Screenshot 2024-10-18 183728_03skvinz.ap3.png",
+      "PackagePath": "staticwebassets\\uploads\\Screenshot 2024-10-18 183728_03skvinz.ap3.png"
     },
     {
       "Id": "C:\\Users\\np030\\source\\repos\\AgroTrade\\AgroTrade\\AgroTrade\\wwwroot\\uploads\\WhatsApp Image 2024-09-29 at 17.28.29_9d515613_duvippw5.0ef.jpg",
@@ -257,8 +265,16 @@
       "PackagePath": "staticwebassets\\uploads\\WhatsApp Image 2024-09-29 at 17.28.29_9d515613_y4js2hi4.4wt.jpg"
     },
     {
+      "Id": "C:\\Users\\np030\\source\\repos\\AgroTrade\\AgroTrade\\AgroTrade\\wwwroot\\uploads\\asus_00u3f0c3.pgf.jpg",
+      "PackagePath": "staticwebassets\\uploads\\asus_00u3f0c3.pgf.jpg"
+    },
+    {
       "Id": "C:\\Users\\np030\\source\\repos\\AgroTrade\\AgroTrade\\AgroTrade\\wwwroot\\uploads\\asus_4ogx1hec.mqc.jpg",
       "PackagePath": "staticwebassets\\uploads\\asus_4ogx1hec.mqc.jpg"
+    },
+    {
+      "Id": "C:\\Users\\np030\\source\\repos\\AgroTrade\\AgroTrade\\AgroTrade\\wwwroot\\uploads\\asus_unqohe3t.cxm.jpg",
+      "PackagePath": "staticwebassets\\uploads\\asus_unqohe3t.cxm.jpg"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.AgroTrade.Microsoft.AspNetCore.StaticWebAssets.props",

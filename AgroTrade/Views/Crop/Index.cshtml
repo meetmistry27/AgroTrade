@@ -34,12 +34,28 @@
                 <td>@crop.CreatedAt</td>
                 <td>@crop.UserId</td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@crop.CropId">Edit</a> |
-                    <a asp-action="Delete" asp-route-id="@crop.CropId">Delete</a>
+                    @{
+                        if (Context.Request.Cookies.TryGetValue("UserId", out var userIdString) &&
+                        int.TryParse(userIdString, out var userId))
+                        {
+                            if (crop.UserId == userId)
+                            {
+                                <a asp-action="Edit" asp-route-id="@crop.CropId">Edit</a>                                        
+                                <a asp-action = "Delete" asp-route-id = "@crop.CropId"> Delete </a>
+                            }
+                            else
+                            {
+                                <a asp-controller="Transaction" asp-action="Buy" asp-route-cropId="@crop.CropId">Buy</a>
+                            }
+                            
+                        }
+                        else
+                        {
+                            <span>Buy</span>
+                        }
+                    }
                 </td>
             </tr>
         }
     </tbody>
 </table>
-
-<a asp-action="Create">Create New Crop</a>

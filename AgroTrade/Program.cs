@@ -12,8 +12,10 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     new MySqlServerVersion(new Version(8, 0, 30))));
 builder.Services.AddScoped<UserService>();
 builder.Services.AddScoped<CropService>();
+builder.Services.AddScoped<TransactionService>();
 
 var app = builder.Build();
+
 
 if (!app.Environment.IsDevelopment())
 {
@@ -23,6 +25,10 @@ if (!app.Environment.IsDevelopment())
 app.UseStaticFiles();
 app.UseRouting();
 app.UseAuthorization();
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllers(); 
+});
 
 app.MapControllerRoute(
     name: "default",

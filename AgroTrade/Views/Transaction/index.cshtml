@@ -1,0 +1,41 @@
+﻿@model IEnumerable<AgroTrade.Models.Transaction>
+
+<h2>Transactions</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Transaction ID</th>
+            <th>Quantity</th>
+            <th>Total Price</th>
+            <th>Transaction Date</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var transaction in Model)
+        {
+            <tr>
+                <td>@transaction.TransactionId</td>
+                <td>@transaction.Quantity</td>
+                <td>@transaction.TotalPrice</td>
+                <td>@transaction.TransactionDate</td>
+                <td>@transaction.Status</td>
+                <td>
+                    @if (transaction.Status == TransactionStatus.Pending)
+                    {
+                        <form asp-action="Accept" method="post" style="display:inline;">
+                            <input type="hidden" name="transactionId" value="@transaction.TransactionId" />
+                            <button type="submit">Accept</button>
+                        </form>
+                        <form asp-action="Reject" method="post" style="display:inline;">
+                            <input type="hidden" name="transactionId" value="@transaction.TransactionId" />
+                            <button type="submit">Reject</button>
+                        </form>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

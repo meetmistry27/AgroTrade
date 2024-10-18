@@ -1,0 +1,27 @@
+﻿@model AgroTrade.Models.ViewModel.TransactionViewModel
+
+<h2>Buy Crop</h2>
+
+<form asp-action="CreateTransaction" method="post">
+    <input type="hidden" asp-for="CropId" />
+
+    <div>
+        <label asp-for="Quantity"></label>
+        <input asp-for="Quantity" min="1" required />
+        <span asp-validation-for="Quantity"></span>
+    </div>
+
+    <div>
+        <label>Per Kg Price:</label>
+        <span>@Model.TotalPrice</span>
+    </div>
+
+    <input type="submit" value="Buy" />
+</form>
+
+<a asp-action="Index" controller="Crop">Back to Crops</a>
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger mt-3">@TempData["ErrorMessage"]</div>
+}

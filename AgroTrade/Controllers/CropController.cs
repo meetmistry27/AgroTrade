@@ -57,7 +57,6 @@ namespace AgroTrade.Controllers
 
                     var filePath = Path.Combine(_webHostEnvironment.WebRootPath, "uploads", fileName);
 
-                    // Save the file
                     using (var stream = new FileStream(filePath, FileMode.Create))
                     {
                         await crop.Image.CopyToAsync(stream);
@@ -95,7 +94,16 @@ namespace AgroTrade.Controllers
             {
                 crop.UserId = GetUserId();
 
-                // Handle image upload in Edit
+                var existingCrop = await _cropService.GetcropByid(crop.CropId);
+                if (existingCrop == null)
+                {
+                    return NotFound();  
+                }
+
+                existingCrop.CropName = crop.CropName;
+                existingCrop.Quantity = crop.Quantity;
+                existingCrop.Price = crop.Price;
+
                 if (crop.Image != null && crop.Image.Length > 0)
                 {
                     var fileName = Path.GetFileNameWithoutExtension(crop.Image.FileName);
@@ -109,14 +117,20 @@ namespace AgroTrade.Controllers
                         await crop.Image.CopyToAsync(stream);
                     }
 
-                    crop.ImagePath = "/uploads/" + fileName;
+                    existingCrop.ImagePath = "/uploads/" + fileName;
                 }
-
-                await _cropService.UpdateCropAsync(crop);
+                else
+                {
+                    existingCrop.ImagePath = existingCrop.ImagePath; 
+                }
+                
+                await _cropService.UpdateCropAsync(existingCrop);
                 return RedirectToAction(nameof(Index));
             }
+
             return View(crop);
         }
+
 
         public async Task<IActionResult> Delete(int id)
         {
