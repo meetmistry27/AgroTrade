@@ -4,22 +4,36 @@
     ViewData["Title"] = "User Profile";
 }
 
-<h1>@ViewData["Title"]</h1>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-lg border-0" style="border-radius: 15px;">
+                <div class="card-body p-5" style="background-color: #f9f7f0; border-radius: 15px;">
+                    <h2 class="text-center mb-4" style="color: #2d6a4f;">@ViewData["Title"]</h2>
 
-<div>
-    <h3>Your Profile Information</h3>
-    <p><strong>Username:</strong> @Model.Username</p>
-    <p><strong>Email:</strong> @Model.Email</p>
-    <p><strong>Phone:</strong> @Model.Phone</p>
-    <p><strong>Created At:</strong> @Model.CreatedAt.ToString("g")</p>
+                    <div class="mb-4">
+                        <h4 class="text-center" style="color: #2d6a4f;">Your Profile Information</h4>
+                        <div class="profile-info mt-4">
+                            <p><strong>Username:</strong> <span class="text-success">@Model.Username</span></p>
+                            <p><strong>Email:</strong> <span class="text-success">@Model.Email</span></p>
+                            <p><strong>Phone:</strong> <span class="text-success">@Model.Phone</span></p>
+                            <p><strong>Created At:</strong> <span class="text-muted">@Model.CreatedAt.ToString("g")</span></p>
+                        </div>
+                    </div>
 
-    <a href="@Url.Action("Edit", "User", new { id = Model.UserId })" class="btn btn-warning">Edit Profile</a>
-    <form asp-action="Logout" method="post" style="display:inline;">
-        <button type="submit" class="btn btn-danger">Logout</button>
-    </form>
+                    <div class="d-flex justify-content-center">
+                        <a href="@Url.Action("Edit", "User", new { id = Model.UserId })" class="btn btn-warning btn-lg mx-2" style="border-radius: 10px;">Edit Profile</a>
+                        <form asp-action="Logout" method="post" style="display:inline;">
+                            <button type="submit" class="btn btn-danger btn-lg mx-2" style="border-radius: 10px;">Logout</button>
+                        </form>
+                    </div>
+
+                    @if (TempData["SuccessMessage"] != null)
+                    {
+                        <div class="alert alert-success mt-4">@TempData["SuccessMessage"]</div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-
-@if (TempData["SuccessMessage"] != null)
-{
-    <div class="alert alert-success mt-3">@TempData["SuccessMessage"]</div>
-}

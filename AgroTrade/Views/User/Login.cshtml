@@ -4,25 +4,35 @@
     ViewData["Title"] = "Login";
 }
 
-<h1>Login</h1>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-5">
+            <div class="card shadow-lg border-0" style="border-radius: 15px;">
+                <div class="card-body p-5" style="background-color: #f9f7f0; border-radius: 15px;">
+                    <h2 class="text-center mb-4" style="color: #2d6a4f;">Welcome to AgroTrade</h2>
+                    <p class="text-center text-muted">Please login to continue selling your crops</p>
 
-<div class="row">
-    <div class="col-md-6">
-        <form asp-action="Login" method="post">
-            <div class="form-group">
-                <label asp-for="Email"></label>
-                <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
+                    <form asp-action="Login" method="post">
+                        <div class="form-group mb-4">
+                            <label asp-for="Email" class="form-label" style="color: #2d6a4f;"></label>
+                            <input asp-for="Email" class="form-control p-3" placeholder="Enter your email" style="border-radius: 10px; border: 2px solid #d9e2dc;" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                        <div class="form-group mb-4">
+                            <label asp-for="Password" class="form-label" style="color: #2d6a4f;"></label>
+                            <input asp-for="Password" type="password" class="form-control p-3" placeholder="Enter your password" style="border-radius: 10px; border: 2px solid #d9e2dc;" />
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-success btn-lg" style="background-color: #40916c; border-color: #40916c; border-radius: 10px;">Login</button>
+                        </div>
+                    </form>
+
+                    <div class="mt-3 text-center">
+                        <a asp-controller="User" asp-action="Register" class="text-muted">Don't have an account? <span class="text-success">Register here</span>.</a>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="Password"></label>
-                <input asp-for="Password" type="password" class="form-control" />
-                <span asp-validation-for="Password" class="text-danger"></span>
-            </div>
-            <button type="submit" class="btn btn-primary">Login</button>
-        </form>
+        </div>
     </div>
 </div>
-
-<a asp-controller="User" asp-action="Register">Don't have an account? Register here.</a>
-
