@@ -13,6 +13,11 @@ namespace AgroTrade.Controllers
             _logger = logger;
         }
 
+        public IActionResult WebSocket()
+        {
+            return View();
+        }
+
         public IActionResult Index()
         {
             return View();

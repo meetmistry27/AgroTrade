@@ -17,6 +17,9 @@
                         <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="WebSocket">wsdemo</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                     </li>
                     <li class="nav-item">
@@ -29,7 +32,7 @@
                                  <a class="nav-link text-dark" asp-area="" asp-controller="Transaction" asp-action="Index" asp-route-id="@userId">History</a>
                             </li>
                             <li class="nav-item">
-                                 <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Profile" >Profile</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Profile" asp-route-id="@userId">Profile</a>
                             </li>
                         
                     }

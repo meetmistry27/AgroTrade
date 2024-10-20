@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "WebSocket Demo";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<input type="text" id="messageInput" placeholder="Type a message...">
+<button id="sendButton">Send</button>
+<div id="messages"></div>
+
+<script>
+    const connection = new WebSocket('ws://localhost:5000/ws'); 
+    const messagesDiv = document.getElementById('messages');
+    const sendButton = document.getElementById('sendButton');
+    const messageInput = document.getElementById('messageInput');
+
+    connection.onopen = () => {
+        console.log('WebSocket connection established');
+    };
+
+    connection.onmessage = (event) => {
+        const message = document.createElement('div');
+        message.textContent = 'Received: ' + event.data;
+        messagesDiv.appendChild(message);
+    };
+
+    sendButton.onclick = () => {
+        const message = messageInput.value;
+        connection.send(message);
+        messageInput.value = '';
+    };
+
+    connection.onclose = () => {
+        console.log('WebSocket connection closed');
+    };
+
+    connection.onerror = (error) => {
+        console.error('WebSocket error:', error);
+    };
+</script>
