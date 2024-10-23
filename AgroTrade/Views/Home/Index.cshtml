@@ -1,7 +1,156 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home";
 }
 
-<div class="text-center">
-    <p>Hello</p>
+<div class="hero-section text-center text-white py-5">
+    <div class="container">
+        <h1 class="display-3 mb-4">Welcome to AgroTrade</h1>
+        <p class="lead mb-4">Connect with farmers, buy fresh produce, and support local agriculture.</p>
+        <a class="btn btn-success btn-lg px-5 py-3" asp-controller="Crop" asp-action="Index" role="button">
+            Browse Crops
+            <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+    </div>
 </div>
+
+<div class="container mt-5">
+    <div class="row features-section">
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body text-center">
+                    <i class="fas fa-tractor fa-3x text-success mb-3"></i>
+                    <h3 class="card-title">For Farmers</h3>
+                    <p class="card-text">List your crops, set your prices, and connect directly with buyers.</p>
+                    <a asp-controller="Crop" asp-action="Create" class="btn btn-outline-success mt-3">List Your Crop</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body text-center">
+                    <i class="fas fa-shopping-basket fa-3x text-success mb-3"></i>
+                    <h3 class="card-title">For Buyers</h3>
+                    <p class="card-text">Find fresh, local produce and support sustainable farming practices.</p>
+                    <a asp-controller="Crop" asp-action="Index" class="btn btn-outline-success mt-3">Shop Crops</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body text-center">
+                    <i class="fas fa-leaf fa-3x text-success mb-3"></i>
+                    <h3 class="card-title">Our Mission</h3>
+                    <p class="card-text">Promoting fair trade and sustainable agriculture in our community.</p>
+                    <a asp-controller="Home" asp-action="About" class="btn btn-outline-success mt-3">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="how-it-works-section my-5 py-5 bg-light rounded">
+        <h2 class="text-center mb-5">How It Works</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="step-card text-center">
+                    <div class="step-icon bg-success text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3">
+                        <i class="fas fa-user-plus fa-2x"></i>
+                    </div>
+                    <h4>Sign Up</h4>
+                    <p>Create your account as a farmer or buyer</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="step-card text-center">
+                    <div class="step-icon bg-success text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3">
+                        <i class="fas fa-seedling fa-2x"></i>
+                    </div>
+                    <h4>List or Browse</h4>
+                    <p>List your crops or browse available produce</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="step-card text-center">
+                    <div class="step-icon bg-success text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3">
+                        <i class="fas fa-handshake fa-2x"></i>
+                    </div>
+                    <h4>Trade</h4>
+                    <p>Negotiate prices and complete transactions</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="testimonials-section my-5">
+        <h2 class="text-center mb-5">What Our Users Say</h2>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="/images/farmer-avatar.jpg" alt="Farmer John" class="rounded-circle mr-3" style="width: 60px; height: 60px; object-fit: cover;">
+                            <div>
+                                <h5 class="mb-0">John Doe</h5>
+                                <small class="text-muted">Local Farmer</small>
+                            </div>
+                        </div>
+                        <p class="card-text">"AgroTrade has revolutionized how I sell my produce. I can reach more customers and get fair prices for my crops."</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="/images/buyer-avatar.jpg" alt="Buyer Sarah" class="rounded-circle mr-3" style="width: 60px; height: 60px; object-fit: cover;">
+                            <div>
+                                <h5 class="mb-0">Sarah Smith</h5>
+                                <small class="text-muted">Regular Buyer</small>
+                            </div>
+                        </div>
+                        <p class="card-text">"I love being able to buy fresh, local produce directly from farmers. The quality is outstanding, and I feel good supporting local agriculture."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Styles {
+    <style>
+        .hero-section {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/farm-hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 0;
+        }
+
+        .features-section .card {
+            transition: transform 0.3s ease-in-out;
+        }
+
+            .features-section .card:hover {
+                transform: translateY(-10px);
+            }
+
+        .step-icon {
+            width: 80px;
+            height: 80px;
+        }
+
+        .how-it-works-section {
+            background-color: #f8f9fa;
+        }
+
+        .testimonials-section .card {
+            transition: box-shadow 0.3s ease-in-out;
+        }
+
+            .testimonials-section .card:hover {
+                box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+            }
+    </style>
+}
+
+@section Scripts {
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+}

@@ -1,34 +1,59 @@
 ﻿@model AgroTrade.Models.Crop
-
-<h2>Create Crop</h2>
-
-<form asp-action="Create" enctype="multipart/form-data">
-    <div>
-        <label asp-for="CropName"></label>
-        <input asp-for="CropName" />
-        <span asp-validation-for="CropName"></span>
-    </div>
-    <div>
-        <label asp-for="Quantity"></label>
-        <input asp-for="Quantity" />
-        <span asp-validation-for="Quantity"></span>
-    </div>
-    <div>
-        <label asp-for="Price"></label>
-        <input asp-for="Price" />
-        <span asp-validation-for="Price"></span>
-    </div>
-    <div>
-        <label asp-for="Image"></label>
-        <input asp-for="Image" type="file" />
-        <span asp-validation-for="Image"></span>
-    </div>
-    <input type="submit" value="Create" />
-</form>
-
-<a asp-action="Index">Back to List</a>
-
-@if (TempData["ErrorMessage"] != null)
-{
-    <div class="alert alert-danger mt-3">@TempData["ErrorMessage"]</div>
+@{
+    ViewData["Title"] = "Create Crop";
 }
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] - AgroTrade</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-green-50">
+    <div class="container mx-auto py-8">
+        <div class="max-w-md mx-auto bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="px-6 py-4 bg-green-600">
+                <h2 class="text-2xl font-bold text-white">Create Crop</h2>
+            </div>
+            <form asp-action="Create" enctype="multipart/form-data" class="p-6">
+                <div class="mb-4">
+                    <label asp-for="CropName" class="block text-gray-700 text-sm font-bold mb-2"></label>
+                    <input asp-for="CropName" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
+                    <span asp-validation-for="CropName" class="text-red-500 text-xs italic"></span>
+                </div>
+                <div class="mb-4">
+                    <label asp-for="Quantity" class="block text-gray-700 text-sm font-bold mb-2"></label>
+                    <input asp-for="Quantity" type="number" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
+                    <span asp-validation-for="Quantity" class="text-red-500 text-xs italic"></span>
+                </div>
+                <div class="mb-4">
+                    <label asp-for="Price" class="block text-gray-700 text-sm font-bold mb-2"></label>
+                    <input asp-for="Price" type="number" step="0.01" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
+                    <span asp-validation-for="Price" class="text-red-500 text-xs italic"></span>
+                </div>
+                <div class="mb-6">
+                    <label asp-for="Image" class="block text-gray-700 text-sm font-bold mb-2"></label>
+                    <input asp-for="Image" type="file" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
+                    <span asp-validation-for="Image" class="text-red-500 text-xs italic"></span>
+                </div>
+                <div class="flex items-center justify-between">
+                    <input type="submit" value="Create" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline cursor-pointer" />
+                    <a asp-action="Index" class="inline-block align-baseline font-bold text-sm text-green-500 hover:text-green-800">
+                        Back to List
+                    </a>
+                </div>
+            </form>
+        </div>
+
+        @if (TempData["ErrorMessage"] != null)
+        {
+            <div class="max-w-md mx-auto mt-4 bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+                <strong class="font-bold">Error!</strong>
+                <span class="block sm:inline">@TempData["ErrorMessage"]</span>
+            </div>
+        }
+    </div>
+</body>
+</html>

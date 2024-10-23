@@ -1,61 +1,84 @@
 ﻿@model IEnumerable<AgroTrade.Models.Crop>
+@{
+    ViewData["Title"] = "Crops Marketplace";
+}
 
-<h2>Crops</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] - AgroTrade</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-green-50">
+    <div class="container mx-auto py-8">
+        <div class="flex justify-between items-center mb-8">
+            <h1 class="text-4xl font-bold text-green-800">Crops Marketplace</h1>
+            <a asp-action="Create" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded">
+                Create Crop
+            </a>
+        </div>
 
-<table>
-    <thead>
-        <tr>
-            <th>Image</th>
-            <th>Crop Name</th>
-            <th>Quantity</th>
-            <th>Price</th>
-            <th>Created At</th>
-            <th>User ID</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var crop in Model)
-        {
-            <tr>
-                <td>
-                    @if (!string.IsNullOrEmpty(crop.ImagePath))
-                    {
-                        <img src="@crop.ImagePath" alt="Crop Image" style="width: 100px; height: 100px;" />
-                    }
-                    else
-                    {
-                        <span>No Image</span>
-                    }
-                </td>
-                <td>@crop.CropName</td>
-                <td>@crop.Quantity</td>
-                <td>@crop.Price</td>
-                <td>@crop.CreatedAt</td>
-                <td>@crop.UserId</td>
-                <td>
-                    @{
-                        if (Context.Request.Cookies.TryGetValue("UserId", out var userIdString) &&
-                        int.TryParse(userIdString, out var userId))
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            @foreach (var crop in Model)
+            {
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+                    <div class="relative h-48">
+                        @if (!string.IsNullOrEmpty(crop.ImagePath))
                         {
-                            if (crop.UserId == userId)
-                            {
-                                <a asp-action="Edit" asp-route-id="@crop.CropId">Edit</a>                                        
-                                <a asp-action = "Delete" asp-route-id = "@crop.CropId"> Delete </a>
-                            }
-                            else
-                            {
-                                <a asp-controller="Transaction" asp-action="Buy" asp-route-cropId="@crop.CropId">Buy</a>
-                            }
-                            
+                            <img src="@crop.ImagePath" alt="@crop.CropName" class="w-full h-full object-cover" />
                         }
                         else
                         {
-                            <span>Buy</span>
+                            <div class="w-full h-full bg-gray-200 flex items-center justify-center">
+                                <span class="text-gray-500">No Image</span>
+                            </div>
                         }
-                    }
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+                        <div class="absolute top-0 right-0 bg-green-500 text-white px-2 py-1 m-2 rounded-full text-sm font-semibold">
+                            @crop.Quantity kg
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h2 class="text-xl font-semibold text-gray-800 mb-2">@crop.CropName</h2>
+                        <p class="text-gray-600 mb-2">Price: $@crop.Price.ToString("F2") per kg</p>
+                        <p class="text-sm text-gray-500 mb-4">Listed on @crop.CreatedAt.ToString("MMM dd, yyyy")</p>
+
+                        @{
+                            if (Context.Request.Cookies.TryGetValue("UserId", out var userIdString) &&
+                            int.TryParse(userIdString, out var userId))
+                            {
+                                if (crop.UserId == userId)
+                                {
+                                    <div class="flex justify-between">
+                                        <a asp-action="Edit" asp-route-id="@crop.CropId" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">
+                                            Edit
+                                        </a>
+                                        <a asp-action="Delete" asp-route-id="@crop.CropId" class="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded">
+                                            Delete
+                                        </a>
+                                    </div>
+                                }
+                                else
+                                {
+                                    <a asp-controller="Transaction" asp-action="Buy" asp-route-cropId="@crop.CropId" class="block w-full bg-green-500 hover:bg-green-600 text-white text-center py-2 px-4 rounded">
+                                        Buy Now
+                                    </a>
+                                }
+                            }
+                            else
+                            {
+                                <span class="block w-full bg-gray-300 text-gray-600 text-center py-2 px-4 rounded cursor-not-allowed">
+                                    Sign in to Buy
+                                </span>
+                            }
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+</body>
+</html>
