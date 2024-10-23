@@ -46,7 +46,7 @@ namespace AgroTrade.Controllers
         }
 
         [HttpPost("buy")]
-        public async Task<IActionResult> CreateTransaction(TransactionViewModel transactionViewModel) // Changed the action name
+        public async Task<IActionResult> CreateTransaction(TransactionViewModel transactionViewModel) 
         {
             if (ModelState.IsValid)
             {
@@ -81,11 +81,25 @@ namespace AgroTrade.Controllers
             return View(transactionViewModel);
         }
 
+        [HttpPost("accept")]
         public async Task<IActionResult> Accept(int transactionId)
         {
-            await _transactionService.AcceptTransactionAsync(transactionId);
-            return RedirectToAction("index");
+            try
+            {
+                Console.WriteLine($"Transaction ID: {transactionId}");
+
+                await _transactionService.AcceptTransactionAsync(transactionId);
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+                TempData["ErrorMessage"] = "An error occurred while accepting the transaction.";
+                return RedirectToAction("Index");
+            }
         }
+
+
 
         [HttpPost("reject")]
         public async Task<IActionResult> Reject(int transactionId)

@@ -7,7 +7,6 @@
     <meta name="keywords" content="AgroTrade, farming, agriculture, marketplace, crops" />
     <meta name="author" content="AgroTrade Team" />
 
-    <!-- Open Graph Meta for social media sharing -->
     <meta property="og:title" content="AgroTrade - Buy Direct from Farmers" />
     <meta property="og:description" content="Connecting farmers and buyers for sustainable agriculture." />
     <meta property="og:image" content="~/images/og-image.jpg" />
@@ -15,7 +14,6 @@
 
     <title>@ViewData["Title"] - AgroTrade</title>
 
-    <!-- CSS Files -->
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/AgroTrade.styles.css" asp-append-version="true" />
@@ -93,9 +91,6 @@
                         <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-controller="Home" asp-action="About">About Us</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Contact">Contact</a>
-                        </li>
                     </ul>
                     <ul class="navbar-nav">
                         @if (Context.Request.Cookies.TryGetValue("UserId", out var userId))
@@ -106,9 +101,12 @@
                             <li class="nav-item">
                                 <a class="nav-link" asp-area="" asp-controller="User" asp-action="Profile" asp-route-id="@userId">Profile</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link btn btn-outline-success" asp-area="" asp-controller="User" asp-action="Logout">Logout</a>
+                           <li class="nav-item">
+                                <form asp-area="" asp-controller="User" asp-action="Logout" method="post" class="inline">
+                                    <button type="submit" class="nav-link btn btn-outline-success">Logout</button>
+                                </form>
                             </li>
+
                         }
                         else
                         {
@@ -131,7 +129,6 @@
         </main>
     </div>
 
-    <!-- Moved Scripts to End for Performance Improvement -->
     <script src="~/lib/jquery/dist/jquery.min.js" asp-append-version="true"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js" asp-append-version="true"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
