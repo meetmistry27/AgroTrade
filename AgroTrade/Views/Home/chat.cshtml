@@ -1,0 +1,99 @@
+﻿@model AgroTrade.Models.User
+
+@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="hero-section text-center text-white py-5">
+    <div class="container">
+        <h1 class="display-3 mb-4">Welcome to AgroTrade</h1>
+        <p class="lead mb-4">Connect with farmers, buy fresh produce, and support local agriculture.</p>
+        <a class="btn btn-success btn-lg px-5 py-3" asp-controller="Crop" asp-action="Index" role="button">
+            Browse Crops
+            <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+    </div>
+</div>
+
+<div class="container mt-5">
+    <h2 class="text-center mb-5">Chat with Other Users</h2>
+    <div id="messages" class="chat-box"></div>
+
+    <div class="input-group mt-3">
+        <input type="text" id="messageInput" class="form-control" placeholder="Type a message...">
+        <div class="input-group-append">
+            <button id="sendButton" class="btn btn-success">Send</button>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        const connection = new WebSocket('ws://localhost:5004/ws');
+        const messagesDiv = document.getElementById('messages');
+        const sendButton = document.getElementById('sendButton');
+        const messageInput = document.getElementById('messageInput');
+        const username = "@Model.Username";  // Using the username from the User model
+
+        connection.onopen = () => {
+            console.log('WebSocket connection established');
+        };
+
+        connection.onmessage = (event) => {
+            const data = JSON.parse(event.data);
+            const messageDiv = document.createElement('div');
+            messageDiv.classList.add('message', data.sender === username ? 'message-right' : 'message-left');
+            messageDiv.textContent = data.sender + ": " + data.message;
+            messagesDiv.appendChild(messageDiv);
+        };
+
+        sendButton.onclick = () => {
+            const message = messageInput.value.trim();
+            if (message) {
+                const messageData = JSON.stringify({ sender: username, message: message });
+                connection.send(messageData);
+                messageInput.value = '';
+            }
+        };
+
+        connection.onclose = () => {
+            console.log('WebSocket connection closed');
+        };
+
+        connection.onerror = (error) => {
+            console.error('WebSocket error:', error);
+        };
+    </script>
+}
+
+@section Styles {
+    <style>
+        .chat-box {
+            border: 1px solid #ccc;
+            padding: 15px;
+            height: 300px;
+            overflow-y: scroll;
+        }
+
+        .message {
+            padding: 10px;
+            border-radius: 20px;
+            margin-bottom: 10px;
+            max-width: 70%;
+        }
+
+        .message-right {
+            background-color: #d1e7dd;
+            text-align: right;
+            margin-left: auto;
+        }
+
+        .message-left {
+            background-color: #f8d7da;
+        }
+
+        .input-group {
+            margin-top: 20px;
+        }
+    </style>
+}

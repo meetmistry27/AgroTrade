@@ -99,7 +99,8 @@ namespace AgroTrade.Controllers
                 ModelState.AddModelError("", "Profile update failed."); 
             }
 
-            TempData["ErrorMessage"] = "An error occurred while updating the profile."; 
+            var errors = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage);
+            TempData["ErrorMessage"] = string.Join(", ", errors);
             return View(user);
         }
 

@@ -26,13 +26,15 @@ if (!app.Environment.IsDevelopment())
 
 app.UseStaticFiles();
 app.UseRouting();
-app.UseAuthorization();
+
+var clients = new List<WebSocket>();
 
 app.Map("/ws", async context =>
 {
     if (context.WebSockets.IsWebSocketRequest)
     {
         WebSocket webSocket = await context.WebSockets.AcceptWebSocketAsync();
+        clients.Add(webSocket);
         var buffer = new byte[1024];
 
         try
@@ -44,18 +46,26 @@ app.Map("/ws", async context =>
                 if (result.MessageType == WebSocketMessageType.Close)
                 {
                     await webSocket.CloseAsync(WebSocketCloseStatus.NormalClosure, "Closing", CancellationToken.None);
+                    clients.Remove(webSocket); 
                     break;
                 }
 
                 var message = Encoding.UTF8.GetString(buffer, 0, result.Count);
                 Console.WriteLine("Received: " + message);
 
-                await webSocket.SendAsync(new ArraySegment<byte>(buffer, 0, result.Count), result.MessageType, result.EndOfMessage, CancellationToken.None);
+                foreach (var client in clients)
+                {
+                    if (client.State == WebSocketState.Open)
+                    {
+                        await client.SendAsync(new ArraySegment<byte>(buffer, 0, result.Count), result.MessageType, result.EndOfMessage, CancellationToken.None);
+                    }
+                }
             }
         }
         catch (Exception ex)
         {
             Console.WriteLine($"WebSocket error: {ex.Message}");
+            clients.Remove(webSocket);
         }
     }
     else
@@ -63,6 +73,7 @@ app.Map("/ws", async context =>
         context.Response.StatusCode = 400;
     }
 });
+
 
 app.MapControllerRoute(
     name: "default",
