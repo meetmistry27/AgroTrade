@@ -1,4 +1,4 @@
-# Course Management System with .NET Core MVC
+# Farmer's Crop Selling MarketPlace with .NET Core MVC
 
 AgroTrade is an all-in-one platform for farmers to list and sell their crops online. Farmers can both buy and sell produce, while also connecting and chatting with other farmers. The platform simplifies transactions and fosters a supportive farming community.
 
