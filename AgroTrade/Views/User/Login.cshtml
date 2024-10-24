@@ -36,3 +36,21 @@
         </div>
     </div>
 </div>
+
+@if (TempData["failure"] != null)
+{
+    <div id="alert" class="max-w-md mx-auto mt-4 bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+        <strong class="font-bold">Error!</strong>
+        <span class="block sm:inline">@TempData["failure"]</span>
+    </div>
+
+    <script>
+        // Hide the alert after 4 seconds
+        setTimeout(function () {
+            var alert = document.getElementById('alert');
+            if (alert) {
+                alert.style.display = 'none';
+            }
+        }, 4000);
+    </script>
+}

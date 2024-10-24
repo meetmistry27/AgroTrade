@@ -24,7 +24,7 @@ namespace AgroTrade.Models
         [NotMapped]
         public IFormFile? Image { get; set; }
 
-        public string? ImagePath { get; set; } 
+        public string? ImagePath { get; set; }
 
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
@@ -32,5 +32,6 @@ namespace AgroTrade.Models
         public int UserId { get; set; }
 
         public User? User { get; set; }
+
     }
 }

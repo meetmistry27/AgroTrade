@@ -27,6 +27,7 @@ namespace AgroTrade.Controllers
                 var result = await _userService.RegisterUser(user);
                 if (result)
                 {
+                    
                     return RedirectToAction("Login");
                 }
                 ModelState.AddModelError("", "User already exists.");
@@ -62,7 +63,7 @@ namespace AgroTrade.Controllers
 
                     return RedirectToAction("Profile", new { id = user.UserId });
                 }
-                ModelState.AddModelError("", "Invalid login attempt.");
+                TempData["failure"] = "password is incorrect!";
             }
 
             return View();

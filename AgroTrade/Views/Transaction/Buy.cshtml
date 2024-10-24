@@ -1,27 +1,39 @@
 ﻿@model AgroTrade.Models.ViewModel.TransactionViewModel
 
-<h2>Buy Crop</h2>
+<div class="container mx-auto py-8">
+    <div class="max-w-md mx-auto bg-white rounded-lg shadow-md overflow-hidden">
+        <div class="px-6 py-4 bg-green-600">
+            <h2 class="text-2xl font-bold text-gray-700">Buy Crop</h2>
+        </div>
 
-<form asp-action="CreateTransaction" method="post">
-    <input type="hidden" asp-for="CropId" />
+        <form asp-action="CreateTransaction" method="post" class="p-6">
+            <input type="hidden" asp-for="CropId" />
 
-    <div>
-        <label asp-for="Quantity"></label>
-        <input asp-for="Quantity" min="1" required />
-        <span asp-validation-for="Quantity"></span>
+            <div class="mb-4">
+                <label asp-for="Quantity" class="block text-gray-700 text-sm font-bold mb-2">Quantity (kg)</label>
+                <input asp-for="Quantity" min="1" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
+                <span asp-validation-for="Quantity" class="text-red-500 text-xs italic"></span>
+            </div>
+
+            <div class="mb-6">
+                <label class="block text-gray-700 text-sm font-bold mb-2">Per Kg Price:</label>
+                <span class="text-lg font-semibold text-gray-800">$@Model.TotalPrice</span>
+            </div>
+
+            <div class="flex items-center justify-between">
+                <input type="submit" value="Buy" class="bg-green-500 hover:bg-green-600 text-gray-700 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline cursor-pointer" />
+                <a asp-action="Index" controller="Crop" class="inline-block align-baseline font-bold text-sm text-green-500 hover:text-green-800">
+                    Back to Crops
+                </a>
+            </div>
+        </form>
+
+        @if (TempData["ErrorMessage"] != null)
+        {
+            <div class="max-w-md mx-auto mt-4 bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+                <strong class="font-bold">Error!</strong>
+                <span class="block sm:inline">@TempData["ErrorMessage"]</span>
+            </div>
+        }
     </div>
-
-    <div>
-        <label>Per Kg Price:</label>
-        <span>@Model.TotalPrice</span>
-    </div>
-
-    <input type="submit" value="Buy" />
-</form>
-
-<a asp-action="Index" controller="Crop">Back to Crops</a>
-
-@if (TempData["ErrorMessage"] != null)
-{
-    <div class="alert alert-danger mt-3">@TempData["ErrorMessage"]</div>
-}
+</div>

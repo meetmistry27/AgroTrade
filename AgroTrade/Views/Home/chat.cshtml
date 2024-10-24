@@ -33,7 +33,7 @@
         const messagesDiv = document.getElementById('messages');
         const sendButton = document.getElementById('sendButton');
         const messageInput = document.getElementById('messageInput');
-        const username = "@Model.Username";  // Using the username from the User model
+        const username = "@Model.Username";  
 
         connection.onopen = () => {
             console.log('WebSocket connection established');
@@ -53,7 +53,7 @@
                 const messageData = JSON.stringify({ sender: username, message: message });
                 connection.send(messageData);
                 messageInput.value = '';
-            }
+            }   
         };
 
         connection.onclose = () => {
