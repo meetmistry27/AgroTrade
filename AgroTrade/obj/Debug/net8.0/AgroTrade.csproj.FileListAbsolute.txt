@@ -726,3 +726,5 @@ D:\Project\AgroTrade\AgroTrade\obj\Debug\net8.0\refint\AgroTrade.dll
 D:\Project\AgroTrade\AgroTrade\obj\Debug\net8.0\AgroTrade.pdb
 D:\Project\AgroTrade\AgroTrade\obj\Debug\net8.0\AgroTrade.genruntimeconfig.cache
 D:\Project\AgroTrade\AgroTrade\obj\Debug\net8.0\ref\AgroTrade.dll
+D:\Project\AgroTrade\AgroTrade\bin\Debug\net8.0\Npgsql.dll
+D:\Project\AgroTrade\AgroTrade\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
